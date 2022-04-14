@@ -10,7 +10,11 @@ public class HlavniProgram {
     public void main(String[] args) {
         zofka = new Turtle();
 
-        nakresliSlunicko(zofka);
+        //nakresliDomecek(zofka);
+        //nakresliUlicu(zofka);
+        //nakresliPrasatko(zofka);
+        //nakresliSlunicko(zofka);
+        nakresliCelyObrazek(zofka);
 
     }
 
@@ -74,7 +78,8 @@ public class HlavniProgram {
         zelva.move(30);
     }
 
-    private void nakresliMesto(Turtle zelva){
+    private void nakresliUlici(Turtle zelva){
+        zelva.setLocation(200,200);
         for (int i = 0; i < 5; i++){
             zelva.penDown();
             nakresliDomecek(zelva);
@@ -100,6 +105,23 @@ public class HlavniProgram {
             zelva.move(20);
             zelva.turnLeft(90);
         }
+    }
+
+    private void nakresliCelyObrazek(Turtle zelva) {
+        zelva.setLocation(300,75);
+        nakresliSlunicko(zelva);
+        nakresliUlici(zelva);
+        zelva.setLocation(200,400);
+        zelva.penDown();
+        nakresliDomecek(zelva);
+        zelva.turnRight(90);
+        zelva.setLocation(450,475);
+        nakresliPrasatko(zelva);
+        zelva.setLocation(700,400);
+        zelva.turnRight(45);
+        nakresliDomecek(zelva);
+
+
     }
 
 
