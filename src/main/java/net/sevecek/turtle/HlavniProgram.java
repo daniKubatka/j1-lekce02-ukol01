@@ -2,13 +2,15 @@ package net.sevecek.turtle;
 
 import net.sevecek.turtle.engine.*;
 
+import java.sql.SQLOutput;
+
 public class HlavniProgram {
     Turtle zofka;
 
     public void main(String[] args) {
         zofka = new Turtle();
 
-        nakresliPrasatko(zofka);
+        nakresliSlunicko(zofka);
 
     }
 
@@ -71,5 +73,35 @@ public class HlavniProgram {
         zelva.turnRight(180);
         zelva.move(30);
     }
+
+    private void nakresliMesto(Turtle zelva){
+        for (int i = 0; i < 5; i++){
+            zelva.penDown();
+            nakresliDomecek(zelva);
+            zelva.turnRight(180);
+            zelva.penUp();
+            zelva.move(150);
+            zelva.turnLeft(90);
+        }
+    }
+
+    private void nakresliSlunicko(Turtle zelva) {
+
+        for (int i = 0; i < 9; i++) {
+
+            for (int louc = 0; louc < 2; louc++) {
+                zelva.move(10);
+                zelva.turnRight(20);
+            }
+
+            zelva.turnLeft(90);
+            zelva.move(20);
+            zelva.turnLeft(180);
+            zelva.move(20);
+            zelva.turnLeft(90);
+        }
+    }
+
+
 
 }
