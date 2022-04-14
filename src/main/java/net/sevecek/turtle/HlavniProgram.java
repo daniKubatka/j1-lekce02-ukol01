@@ -14,8 +14,8 @@ public class HlavniProgram {
         //nakresliUlicu(zofka);
         //nakresliPrasatko(zofka);
         //nakresliSlunicko(zofka);
+        //napisJmeno(zofka);
         nakresliCelyObrazek(zofka);
-
     }
 
     public void nakresliCtverec(Turtle zelva){
@@ -115,14 +115,98 @@ public class HlavniProgram {
         zelva.penDown();
         nakresliDomecek(zelva);
         zelva.turnRight(90);
-        zelva.setLocation(450,475);
+        zelva.setLocation(500,475);
         nakresliPrasatko(zelva);
-        zelva.setLocation(700,400);
+        zelva.setLocation(800,400);
         zelva.turnRight(45);
         nakresliDomecek(zelva);
+        zelva.turnRight(90);
+        napisJmeno(zelva);
+    }
 
+    public void napisJmeno(Turtle zelva){
+        zelva.setLocation(200, 650);
+        pismenoD(zelva);
+        zelva.setLocation(265, 650);
+        pismenoA(zelva);
+        zelva.setLocation(350, 650);
+        pismenoN(zelva);
+        zelva.setLocation(450, 650);
+        pismenoI(zelva);
+        zelva.setLocation(475, 650);
+        pismenoE(zelva);
+        zelva.setLocation(530, 650);
+        pismenoL(zelva);
+        zelva.setLocation(590, 650);
+        pismenoA(zelva);
+        zelva.turnLeft(20);
 
     }
+
+    public void pismenoD(Turtle zelva) {
+        zelva.move(100);
+        zelva.turnRight(90);
+        zelva.move(18);
+        for (int i = 0; i < 9; i++) {
+            zelva.turnRight(20);
+            zelva.move(18);
+        }
+        zelva.turnRight(90);
+    }
+
+    public void pismenoA(Turtle zelva){
+        zelva.turnRight(17);
+        zelva.move(105);
+        zelva.turnRight(145);
+        zelva.move(105);
+        zelva.turnLeft(180);
+        zelva.move(50);
+        zelva.turnLeft(70);
+        zelva.move(32);
+        zelva.turnRight(88);
+        }
+
+    public void pismenoN(Turtle zelva){
+      zelva.move(100);
+      zelva.turnRight(145);
+      zelva.move(125);
+      zelva.turnLeft(145);
+      zelva.move(100);
+    }
+
+    public void pismenoI(Turtle zelva){
+      zelva.move(100);
+    }
+
+    public void pismenoE(Turtle zelva){
+        for (int i = 0; i < 2; i++){
+            zelva.turnRight(90);
+            zelva.move(40);
+            zelva.turnRight(180);
+            zelva.move(40);
+            zelva.turnRight(90);
+            zelva.move(50);
+        }
+        zelva.turnRight(90);
+        zelva.move(40);
+        zelva.turnLeft(90);
+    }
+
+    public void pismenoL(Turtle zelva){
+        zelva.turnRight(90);
+        zelva.move(40);
+        zelva.turnRight(180);
+        zelva.move(40);
+        zelva.turnRight(90);
+        zelva.move(100);
+    }
+
+
+
+
+
+
+
 
 
 
