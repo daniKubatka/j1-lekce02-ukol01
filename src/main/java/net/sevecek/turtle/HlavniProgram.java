@@ -11,7 +11,7 @@ public class HlavniProgram {
         zofka = new Turtle();
 
         //nakresliDomecek(zofka);
-        //nakresliUlicu(zofka);
+        //nakresliUlici(zofka);
         //nakresliPrasatko(zofka);
         //nakresliSlunicko(zofka);
         //napisJmeno(zofka);
